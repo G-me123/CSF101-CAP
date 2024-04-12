@@ -11,12 +11,12 @@
 
 # initialize the programme
 def read_input(Input_your_file_name):
-    x = []
-    with open(Input_your_file_name, 'r') as files:
-        for y in files:
-            opponent_choice, outcome = y.split()
-            x.append((opponent_choice, outcome))
-    return x
+    x = []  # Initialize an empty list to store the tuples
+    with open(Input_your_file_name, 'r') as files: # Open the file with the given filename for reading
+        for y in files: # Iterate over each line in the file
+            opponent_choice, outcome = y.split() # Split the line into opponent's choice and outcome
+            x.append((opponent_choice, outcome))  # Append the tuple to the list
+    return x  # Return the list of tuples
 
 # Calculating the score for each round
 def calculate_score(Total_Number_of_rounds):
@@ -47,5 +47,5 @@ def calculate_score(Total_Number_of_rounds):
 
 
 # To executed a program
-Input_your_file_name = "CSF101CAP/input_4_cap1.txt" 
-calculate_score(read_input(Input_your_file_name))
+Input_your_file_name = "CSF101CAP/input_4_cap1.txt" # As per the student number
+calculate_score(read_input(Input_your_file_name)) # calculate the total score of the input file
